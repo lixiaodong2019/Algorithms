@@ -1,5 +1,9 @@
 package algorithms.search;
 
+import edu.princeton.cs.introcs.In;
+
+import java.util.HashMap;
+
 public class BinaryTree<K extends Comparable<K>, V> {
     private Node root;
 
@@ -24,7 +28,7 @@ public class BinaryTree<K extends Comparable<K>, V> {
                     '}';
         }
     }
-    Algorithms
+
     public int size() { //节点的数量
         return size(root);
     }
@@ -36,6 +40,7 @@ public class BinaryTree<K extends Comparable<K>, V> {
             return node.N;
         }
     }
+
 
     public V get(K key) {
         return get(root, key);
@@ -165,17 +170,14 @@ public class BinaryTree<K extends Comparable<K>, V> {
     }
 
     public static void main(String[] args) {
-        BinaryTree<Integer, String> bt = new BinaryTree<>();
-        int N = 100000;
-        for (int i = 0; i < N; i++) {
-            int temp = (int) (Math.random() * (N));
-            bt.put(temp, temp + "");
-        }
-        System.out.println(bt.get(7547));
-        System.out.println(bt.max());
-        System.out.println(bt.min());
-        System.out.println(bt.size());
+        BinaryTree<Integer, Integer> binaryTree = new BinaryTree<>();
+        binaryTree.put(1, 2);
+        binaryTree.put(3, 4);
+        binaryTree.put(5, 6);
+        binaryTree.put(7, 8);
+
+
+        binaryTree.get(5);
 
     }
-
 }
